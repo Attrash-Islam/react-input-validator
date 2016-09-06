@@ -36,6 +36,9 @@ class InputValidator extends React.Component {
         clearTimeout(this.vaildationTimer);
         if(this.props.onInputChange) {
             this.props.onInputChange(ref);
+        } else {
+            throw `onInputChange property is required! This function is responsible to 
+                    trigger the validation process, mainly: linked with 'change' or 'click' events`;
         }
         var isValid = validateFn.apply(this, []);
         if(isValid) {

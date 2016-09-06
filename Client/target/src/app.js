@@ -27880,10 +27880,7 @@
 	        this.props.onFormSubmit({
 	            name: this.nameVal,
 	            phone: this.phoneVal,
-	            email: this.emailVal,
-	            city: this.cityVal,
-	            subject: this.subjectVal,
-	            msg: this.contentVal
+	            email: this.emailVal
 	        });
 	    },
 	    render: function render() {
@@ -28080,6 +28077,8 @@
 	            clearTimeout(this.vaildationTimer);
 	            if (this.props.onInputChange) {
 	                this.props.onInputChange(ref);
+	            } else {
+	                throw 'onInputChange property is required! This function is responsible to \n                    trigger the validation process, mainly: linked with \'change\' or \'click\' events';
 	            }
 	            var isValid = validateFn.apply(this, []);
 	            if (isValid) {

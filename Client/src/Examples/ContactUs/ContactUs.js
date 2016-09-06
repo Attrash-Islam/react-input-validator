@@ -9,10 +9,7 @@ const ContactUs = React.createClass({
         this.props.onFormSubmit({
             name: this.nameVal,
             phone: this.phoneVal,
-            email: this.emailVal,
-            city: this.cityVal,
-            subject: this.subjectVal,
-            msg: this.contentVal
+            email: this.emailVal
         });
     },
     render: function() {
