@@ -15,7 +15,7 @@ There are 4 basic states for the input:
 - sn-loading: which indicates that the input is loading (checking pattern)
 
 # Validation timer
-The validation is checked when the user has stop writing for one complete second to follow the UI principles
+The validation is checked when the user has stopped writing for one complete second to follow the UI principles
 <br /><br /><br />
 <img src="https://cdn.rawgit.com/Attrash-Islam/react-input-validator/master/Images/validation_process.png" />
 
