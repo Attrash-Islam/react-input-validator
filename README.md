@@ -2,7 +2,7 @@
 <h1>react-input-validator</h1>
 <h3>Light input SUPER class validator</h3>
 
-<br/></br/>
+<br /><br />
 <img src="https://cdn.rawgit.com/Attrash-Islam/react-input-validator/master/Images/Intro.gif" />
 
 
