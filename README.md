@@ -1,7 +1,7 @@
 # Intro
 react-input-validator is an input SUPER class validator, a clever container for pattern matches, which is so light without any special dependencies at all,
 The main file is InputValidator.js which is included inside InputValidator folder, and that class is an instance of React.component class which is responsible
-for appending classes for the current state of the input, plus linking the input change to outside passed function.
+for appending classes for the current state of the input.
 
 # Usage
 You need to extends this small class and just write your own pattern logic, and the SUPER class will handle the validation status,
