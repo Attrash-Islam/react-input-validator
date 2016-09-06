@@ -9,7 +9,7 @@ for appending classes for the current state of the input.
 
 # Usage
 You need to extends this small class and just write your own pattern logic, and the SUPER class will handle the validation status,
-and will verify from the entered value for every "change" by depending on the passed function from the outside world.
+and will verify from the entered value for every "change" by depending on the passed REQUIRED function from the outside world through the prop `onInputChange`, and to pass the REQUIRED params which is (nodeElement, PatternValidatorFn) .
 
 # States
 There are 4 basic states for the input:
