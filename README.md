@@ -4,7 +4,7 @@
 
 <br/></br/>
 <img src="https://cdn.rawgit.com/Attrash-Islam/react-input-validator/master/Images/Intro.gif" />
-<br/></br/>
+
 
 # Intro
 react-input-validator is a light input SUPER class validator, a clever container for pattern matches, which is so light without any special dependencies at all,
