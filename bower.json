@@ -1,0 +1,17 @@
+{
+  "name": "react-input-validator",
+  "description": "react-input-validator for input validations",
+  "main": "server.js",
+  "authors": [
+    "Islam Attrash <isattrash@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "bower_components"
+  ],
+  "homepage": "",
+  "dependencies": {
+    "font-awesome": "4.6.3",
+    "bootstrap": "3.3.7"
+  }
+}
