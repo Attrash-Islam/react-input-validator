@@ -8,7 +8,7 @@ You need to extends this small class and just write your own pattern logic, and 
 and will verify from the entered value for every "change" by depending on the passed function from the outside world.
 
 # States
-There are 4 basic state for the input:
+There are 4 basic states for the input:
 - sn-valid: which indicates that the input is valid
 - sn-not-valid: which indicates that the input is not valid
 - sn-dirty: which indicates that the input is dirty
