@@ -27,5 +27,5 @@ The validation is checked when the user has stopped writing for one complete sec
 # Install
 <pre>npm install react-input-validator</pre>
 
-# Examples
+# Live Example (See Examples folder for more implementations examples)
 <img src="https://cdn.rawgit.com/Attrash-Islam/react-input-validator/master/Images/Examples.gif" />
