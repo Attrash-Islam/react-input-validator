@@ -27964,7 +27964,7 @@
 	
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'form-group' + _get(FullNameInput.prototype.__proto__ || Object.getPrototypeOf(FullNameInput.prototype), 'getValidationClass', this).call(this) },
+	                { className: 'relative-pos form-group' + _get(FullNameInput.prototype.__proto__ || Object.getPrototypeOf(FullNameInput.prototype), 'getValidationClass', this).call(this) },
 	                _react2.default.createElement(
 	                    'label',
 	                    { htmlFor: 'name-input' },
@@ -27978,7 +27978,8 @@
 	                        _get(FullNameInput.prototype.__proto__ || Object.getPrototypeOf(FullNameInput.prototype), 'onInputChange', _this2).call(_this2, _this2.state.fullNameRef, _this2.validateFullName);
 	                    },
 	                    className: 'form-control',
-	                    id: 'name-input' })
+	                    id: 'name-input' }),
+	                _react2.default.createElement('i', { className: 'hidden fa fa-spin fa-spinner' })
 	            );
 	        }
 	    }, {
@@ -28170,7 +28171,7 @@
 	
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'form-group' + _get(PhoneInput.prototype.__proto__ || Object.getPrototypeOf(PhoneInput.prototype), 'getValidationClass', this).call(this) },
+	                { className: 'relative-pos form-group' + _get(PhoneInput.prototype.__proto__ || Object.getPrototypeOf(PhoneInput.prototype), 'getValidationClass', this).call(this) },
 	                _react2.default.createElement(
 	                    'label',
 	                    { htmlFor: 'phone-input' },
@@ -28183,7 +28184,8 @@
 	                    onChange: function onChange() {
 	                        _get(PhoneInput.prototype.__proto__ || Object.getPrototypeOf(PhoneInput.prototype), 'onInputChange', _this2).call(_this2, _this2.state.phoneRef, _this2.validatePhone);
 	                    },
-	                    className: 'form-control', id: 'phone-input' })
+	                    className: 'form-control', id: 'phone-input' }),
+	                _react2.default.createElement('i', { className: 'hidden fa fa-spin fa-spinner' })
 	            );
 	        }
 	    }, {
@@ -28256,7 +28258,7 @@
 	
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'form-group' + _get(EmailInput.prototype.__proto__ || Object.getPrototypeOf(EmailInput.prototype), 'getValidationClass', this).call(this) },
+	                { className: 'relative-pos form-group' + _get(EmailInput.prototype.__proto__ || Object.getPrototypeOf(EmailInput.prototype), 'getValidationClass', this).call(this) },
 	                _react2.default.createElement(
 	                    'label',
 	                    { htmlFor: 'email-input' },
@@ -28269,7 +28271,8 @@
 	                    onChange: function onChange() {
 	                        _get(EmailInput.prototype.__proto__ || Object.getPrototypeOf(EmailInput.prototype), 'onInputChange', _this2).call(_this2, _this2.state.emailRef, _this2.validateEmail);
 	                    },
-	                    className: 'form-control', id: 'email-input' })
+	                    className: 'form-control', id: 'email-input' }),
+	                _react2.default.createElement('i', { className: 'fa fa-spin fa-spinner hidden' })
 	            );
 	        }
 	    }, {

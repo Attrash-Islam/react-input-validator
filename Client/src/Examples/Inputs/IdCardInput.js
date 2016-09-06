@@ -13,13 +13,14 @@ class IdCardInput extends InputValidator {
 
     render() {
         return (
-            <div className={'form-group' + super.getValidationClass()}>
+            <div className={'relative-pos form-group' + super.getValidationClass()}>
                 <label htmlFor="id-card-input">Id Card:</label>
                 <input type="text"
                        ref={node => this.state.idCardInputRef = node}
                        onChange={() => { super.onInputChange(this.state.idCardInputRef, this.validateIdCard) }}
                        className="form-control"
                        id="id-card-input" />
+                <i className="hidden fa fa-spin fa-spinner"></i>
             </div>
         )
     }

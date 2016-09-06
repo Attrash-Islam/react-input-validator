@@ -12,13 +12,14 @@ class FullNameInput extends InputValidator {
 
     render() {
         return (
-            <div className={'form-group' + super.getValidationClass()}>
+            <div className={'relative-pos form-group' + super.getValidationClass()}>
                 <label htmlFor="name-input">Full Name:</label>
                 <input type="text"
                        ref={node => this.state.fullNameRef = node}
                        onChange={() => { super.onInputChange(this.state.fullNameRef, this.validateFullName) }}
                        className="form-control"
                        id="name-input" />
+                <i className="hidden fa fa-spin fa-spinner"></i>
             </div>
         )
     }

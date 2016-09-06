@@ -12,12 +12,13 @@ class PhoneInput extends InputValidator {
 
     render() {
         return (
-            <div className={'form-group' + super.getValidationClass()}>
+            <div className={'relative-pos form-group' + super.getValidationClass()}>
                 <label htmlFor="phone-input">Phone Number:</label>
                 <input type="text"
                        ref={node => this.state.phoneRef = node}
                        onChange={() => { super.onInputChange(this.state.phoneRef, this.validatePhone) }}
                        className="form-control" id="phone-input" />
+                <i className="hidden fa fa-spin fa-spinner"></i>
             </div>
         )
     }

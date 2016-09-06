@@ -12,12 +12,13 @@ class EmailInput extends InputValidator {
 
     render() {
         return (
-            <div className={'form-group' + super.getValidationClass()}>
+            <div className={'relative-pos form-group' + super.getValidationClass()}>
                 <label htmlFor="email-input">Email:</label>
                 <input type="text"
                        ref={node => this.state.emailRef = node}
                        onChange={() => { super.onInputChange(this.state.emailRef, this.validateEmail) }}
                        className="form-control" id="email-input" />
+                <i className="fa fa-spin fa-spinner hidden"></i>
             </div>
         )
     }

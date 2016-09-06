@@ -1,0 +1,20 @@
+
+.sn-dirty.sn-valid:not(.sn-loading) input {
+    background: #deffdf;
+}
+
+.sn-dirty.sn-not-valid:not(.sn-loading) input {
+    background: #ffe8e8;
+}
+
+.sn-loading .fa-spin {
+    display: inline-block !important;
+    position: absolute;
+    top: 30px;
+    font-size: 22px;
+    right: 4px;
+}
+
+.relative-pos {
+    position: relative;
+}

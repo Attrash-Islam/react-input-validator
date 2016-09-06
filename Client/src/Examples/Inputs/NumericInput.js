@@ -13,13 +13,14 @@ class NumericInput extends InputValidator {
 
     render() {
         return (
-            <div className={'form-group' + super.getValidationClass()}>
+            <div className={'relative-pos form-group' + super.getValidationClass()}>
                 <label htmlFor="numeric-input">Number:</label>
                 <input type="number"
                        ref={node => this.state.numericInputRef = node}
                        onChange={() => { super.onInputChange(this.state.numericInputRef, this.validateNumericInput) }}
                        className="form-control"
                        id="numeric-input" />
+                <i className="hidden fa fa-spin fa-spinner"></i>
             </div>
         )
     }
