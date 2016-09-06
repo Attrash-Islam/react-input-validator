@@ -23,7 +23,7 @@ const ContactUs = React.createClass({
                 <EmailInput onInputChange={val => {this.emailVal = val}} />
                 <button type="button" className="btn btn-default"
                         onClick={() => { this.sendValues() }}>
-                    إرسال
+                    Console.Dir my object
                 </button>
             </form>
         )

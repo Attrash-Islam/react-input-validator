@@ -13,7 +13,7 @@ class FullNameInput extends InputValidator {
     render() {
         return (
             <div className={'form-group' + super.getValidationClass()}>
-                <label htmlFor="name-input">الإسم الكامل</label>
+                <label htmlFor="name-input">Full Name:</label>
                 <input type="text"
                        ref={node => this.state.fullNameRef = node}
                        onChange={() => { super.onInputChange(this.state.fullNameRef, this.validateFullName) }}
@@ -24,8 +24,8 @@ class FullNameInput extends InputValidator {
     }
 
     validateFullName() {
-        let isNumberPattern = /\d/;
-        let moreThanTwoChars = /.{2}/;
+        let isNumberPattern = /\d/; // Without numeric chars
+        let moreThanTwoChars = /.{2}/; // At least two chars
         if(isNumberPattern.test(this.state.fullNameRef.value)) {
             return false;
         }

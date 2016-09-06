@@ -14,7 +14,7 @@ class IdCardInput extends InputValidator {
     render() {
         return (
             <div className={'form-group' + super.getValidationClass()}>
-                <label htmlFor="id-card-input">رقم الهوية</label>
+                <label htmlFor="id-card-input">Id Card:</label>
                 <input type="text"
                        ref={node => this.state.idCardInputRef = node}
                        onChange={() => { super.onInputChange(this.state.idCardInputRef, this.validateIdCard) }}
@@ -25,7 +25,7 @@ class IdCardInput extends InputValidator {
     }
 
     validateIdCard() {
-        let idCardPattern = /^[0-9]{9}$/;
+        let idCardPattern = /^[0-9]{9}$/; //Pattern: 9 digits
         if(idCardPattern.test(this.state.idCardInputRef.value)) {
             return true;
         } else {
