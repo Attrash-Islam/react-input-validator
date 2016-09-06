@@ -16,10 +16,10 @@ There are 4 basic state for the input:
 
 # Validation timer
 The validation is checked when the user has stop writing for one complete second to follow the UI principles
-<img src="https://cdn.rawgit.com/Attrash-Islam/react-input-validator/master/validation_process.png" />
+<img src="https://cdn.rawgit.com/Attrash-Islam/react-input-validator/master/Images/validation_process.png" />
 
 # Install
 npm install react-input-validator
 
 # Examples
-<img src="https://cdn.rawgit.com/Attrash-Islam/react-input-validator/master/Examples.gif" />
+<img src="https://cdn.rawgit.com/Attrash-Islam/react-input-validator/master/Images/Examples.gif" />
