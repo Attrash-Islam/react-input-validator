@@ -1,11 +1,13 @@
 
 import React from 'react';
+import ContactUsContainer from './ContactUs/ContactUsContainer';
+
 
 const App = React.createClass({
     render: function() {
         return (
             <div id="app">
-                { this.props.children }
+                <ContactUsContainer />
             </div>
         )
     }
