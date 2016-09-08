@@ -15,8 +15,8 @@ class PhoneInput extends InputValidator {
             <div className={'relative-pos form-group' + super.getValidationClass()}>
                 <label htmlFor="phone-input">Phone Number:</label>
                 <input type="text"
-                       ref={node => this.state.phoneRef = node}
-                       onChange={() => { super.onInputChange(this.state.phoneRef, this.validatePhone) }}
+                       ref={node => this.phoneRef = node}
+                       onChange={() => { super.onInputChange(this.phoneRef, this.validatePhone) }}
                        className="form-control" id="phone-input" />
                 <i className="hidden fa fa-spin fa-spinner"></i>
             </div>
@@ -26,9 +26,9 @@ class PhoneInput extends InputValidator {
     validatePhone() {
         //Pattern: xxx-xxxxxxx || xxxxxxxxxx
         let phoneRegex = /^[0-9][0-9][0-9](-?)[0-9][0-9][0-9][0-9][0-9][0-9][0-9]$/;
-        if(phoneRegex.test(this.state.phoneRef.value) && !this.state.valid) {
+        if(phoneRegex.test(this.phoneRef.value)) {
             return true;
-        } else if (!phoneRegex.test(this.state.phoneRef.value) && this.state.valid) {
+        } else if (!phoneRegex.test(this.phoneRef.value)) {
             return false;
         }
     }

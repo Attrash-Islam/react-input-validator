@@ -16,8 +16,8 @@ class NumericInput extends InputValidator {
             <div className={'relative-pos form-group' + super.getValidationClass()}>
                 <label htmlFor="numeric-input">Number:</label>
                 <input type="number"
-                       ref={node => this.state.numericInputRef = node}
-                       onChange={() => { super.onInputChange(this.state.numericInputRef, this.validateNumericInput) }}
+                       ref={node => this.numericInputRef = node}
+                       onChange={() => { super.onInputChange(this.numericInputRef, this.validateNumericInput) }}
                        className="form-control"
                        id="numeric-input" />
                 <i className="hidden fa fa-spin fa-spinner"></i>
@@ -27,7 +27,7 @@ class NumericInput extends InputValidator {
 
     validateNumericInput() {
         let numericPattern = /^\d*$/;
-        if(numericPattern.test(this.state.numericInputRef.value)) {
+        if(numericPattern.test(this.numericInputRef.value)) {
             return true;
         } else {
             return false;

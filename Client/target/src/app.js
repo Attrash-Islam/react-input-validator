@@ -22155,10 +22155,10 @@
 	                ),
 	                _react2.default.createElement('input', { type: 'text',
 	                    ref: function ref(node) {
-	                        return _this2.state.fullNameRef = node;
+	                        return _this2.fullNameRef = node;
 	                    },
 	                    onChange: function onChange() {
-	                        _get(FullNameInput.prototype.__proto__ || Object.getPrototypeOf(FullNameInput.prototype), 'onInputChange', _this2).call(_this2, _this2.state.fullNameRef, _this2.validateFullName);
+	                        _get(FullNameInput.prototype.__proto__ || Object.getPrototypeOf(FullNameInput.prototype), 'onInputChange', _this2).call(_this2, _this2.fullNameRef, _this2.validateFullName);
 	                    },
 	                    className: 'form-control',
 	                    id: 'name-input' }),
@@ -22170,11 +22170,11 @@
 	        value: function validateFullName() {
 	            var isNumberPattern = /\d/; // Without numeric chars
 	            var moreThanTwoChars = /.{2}/; // At least two chars
-	            if (isNumberPattern.test(this.state.fullNameRef.value)) {
+	            if (isNumberPattern.test(this.fullNameRef.value)) {
 	                return false;
 	            }
 	
-	            if (!moreThanTwoChars.test(this.state.fullNameRef.value)) {
+	            if (!moreThanTwoChars.test(this.fullNameRef.value)) {
 	                return false;
 	            }
 	
@@ -22362,10 +22362,10 @@
 	                ),
 	                _react2.default.createElement('input', { type: 'text',
 	                    ref: function ref(node) {
-	                        return _this2.state.phoneRef = node;
+	                        return _this2.phoneRef = node;
 	                    },
 	                    onChange: function onChange() {
-	                        _get(PhoneInput.prototype.__proto__ || Object.getPrototypeOf(PhoneInput.prototype), 'onInputChange', _this2).call(_this2, _this2.state.phoneRef, _this2.validatePhone);
+	                        _get(PhoneInput.prototype.__proto__ || Object.getPrototypeOf(PhoneInput.prototype), 'onInputChange', _this2).call(_this2, _this2.phoneRef, _this2.validatePhone);
 	                    },
 	                    className: 'form-control', id: 'phone-input' }),
 	                _react2.default.createElement('i', { className: 'hidden fa fa-spin fa-spinner' })
@@ -22376,9 +22376,9 @@
 	        value: function validatePhone() {
 	            //Pattern: xxx-xxxxxxx || xxxxxxxxxx
 	            var phoneRegex = /^[0-9][0-9][0-9](-?)[0-9][0-9][0-9][0-9][0-9][0-9][0-9]$/;
-	            if (phoneRegex.test(this.state.phoneRef.value) && !this.state.valid) {
+	            if (phoneRegex.test(this.phoneRef.value)) {
 	                return true;
-	            } else if (!phoneRegex.test(this.state.phoneRef.value) && this.state.valid) {
+	            } else if (!phoneRegex.test(this.phoneRef.value)) {
 	                return false;
 	            }
 	        }
@@ -22449,10 +22449,10 @@
 	                ),
 	                _react2.default.createElement('input', { type: 'text',
 	                    ref: function ref(node) {
-	                        return _this2.state.emailRef = node;
+	                        return _this2.emailRef = node;
 	                    },
 	                    onChange: function onChange() {
-	                        _get(EmailInput.prototype.__proto__ || Object.getPrototypeOf(EmailInput.prototype), 'onInputChange', _this2).call(_this2, _this2.state.emailRef, _this2.validateEmail);
+	                        _get(EmailInput.prototype.__proto__ || Object.getPrototypeOf(EmailInput.prototype), 'onInputChange', _this2).call(_this2, _this2.emailRef, _this2.validateEmail);
 	                    },
 	                    className: 'form-control', id: 'email-input' }),
 	                _react2.default.createElement('i', { className: 'fa fa-spin fa-spinner hidden' })
@@ -22463,9 +22463,9 @@
 	        value: function validateEmail() {
 	            //Pattern: Email pattern
 	            var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	            if (emailRegex.test(this.state.emailRef.value) && !this.state.valid) {
+	            if (emailRegex.test(this.emailRef.value)) {
 	                return true;
-	            } else if (!emailRegex.test(this.state.emailRef.value) && this.state.valid) {
+	            } else if (!emailRegex.test(this.emailRef.value)) {
 	                return false;
 	            }
 	        }

@@ -16,8 +16,8 @@ class IdCardInput extends InputValidator {
             <div className={'relative-pos form-group' + super.getValidationClass()}>
                 <label htmlFor="id-card-input">Id Card:</label>
                 <input type="text"
-                       ref={node => this.state.idCardInputRef = node}
-                       onChange={() => { super.onInputChange(this.state.idCardInputRef, this.validateIdCard) }}
+                       ref={node => this.idCardInputRef = node}
+                       onChange={() => { super.onInputChange(this.idCardInputRef, this.validateIdCard) }}
                        className="form-control"
                        id="id-card-input" />
                 <i className="hidden fa fa-spin fa-spinner"></i>
@@ -27,7 +27,7 @@ class IdCardInput extends InputValidator {
 
     validateIdCard() {
         let idCardPattern = /^[0-9]{9}$/; //Pattern: 9 digits
-        if(idCardPattern.test(this.state.idCardInputRef.value)) {
+        if(idCardPattern.test(this.idCardInputRef.value)) {
             return true;
         } else {
             return false;

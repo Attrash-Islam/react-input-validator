@@ -15,8 +15,8 @@ class FullNameInput extends InputValidator {
             <div className={'relative-pos form-group' + super.getValidationClass()}>
                 <label htmlFor="name-input">Full Name:</label>
                 <input type="text"
-                       ref={node => this.state.fullNameRef = node}
-                       onChange={() => { super.onInputChange(this.state.fullNameRef, this.validateFullName) }}
+                       ref={node => this.fullNameRef = node}
+                       onChange={() => { super.onInputChange(this.fullNameRef, this.validateFullName) }}
                        className="form-control"
                        id="name-input" />
                 <i className="hidden fa fa-spin fa-spinner"></i>
@@ -27,11 +27,11 @@ class FullNameInput extends InputValidator {
     validateFullName() {
         let isNumberPattern = /\d/; // Without numeric chars
         let moreThanTwoChars = /.{2}/; // At least two chars
-        if(isNumberPattern.test(this.state.fullNameRef.value)) {
+        if(isNumberPattern.test(this.fullNameRef.value)) {
             return false;
         }
 
-        if(!moreThanTwoChars.test(this.state.fullNameRef.value)) {
+        if(!moreThanTwoChars.test(this.fullNameRef.value)) {
             return false;
         }
 
