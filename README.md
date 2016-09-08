@@ -36,8 +36,9 @@ The validation is checked when the user has stopped writing for one complete sec
 Then go to: <pre>file:///{Your Path}/react-input-validator/Client/index.html</pre>
 
 # Example (See Examples folder for more implementations examples)
-<pre>
 
+
+```
 import InputValidator from 'react-input-validator';
 
 class PhoneInput extends InputValidator {
@@ -73,6 +74,5 @@ class PhoneInput extends InputValidator {
 
 
 export default PhoneInput;
+```
 
-
-</pre>
