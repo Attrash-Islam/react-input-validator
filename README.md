@@ -35,5 +35,44 @@ The validation is checked when the user has stopped writing for one complete sec
 <pre>npm run build</pre>
 Then go to: <pre>file:///{Your Path}/react-input-validator/Client/index.html</pre>
 
-# Live Example (See Examples folder for more implementations examples)
-<img src="https://cdn.rawgit.com/Attrash-Islam/react-input-validator/master/Images/Examples.gif" />
+# Example (See Examples folder for more implementations examples)
+<pre>
+
+import InputValidator from 'react-input-validator';
+
+class PhoneInput extends InputValidator {
+
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <div className={'relative-pos form-group' + super.getValidationClass()}>
+                <label htmlFor="phone-input">Phone Number:</label>
+                <input type="text"
+                       ref={node => this.phoneRef = node}
+                       onChange={() => { super.onInputChange(this.phoneRef, this.validatePhone) }}
+                       className="form-control" id="phone-input" />
+                <i className="hidden fa fa-spin fa-spinner"></i>
+            </div>
+        )
+    }
+
+    validatePhone() {
+        //Pattern: xxx-xxxxxxx || xxxxxxxxxx
+        let phoneRegex = /^[0-9][0-9][0-9](-?)[0-9][0-9][0-9][0-9][0-9][0-9][0-9]$/;
+        if(phoneRegex.test(this.phoneRef.value)) {
+            return true;
+        } else if (!phoneRegex.test(this.phoneRef.value)) {
+            return false;
+        }
+    }
+
+}
+
+
+export default PhoneInput;
+
+
+</pre>
